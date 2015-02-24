@@ -1,0 +1,21 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Constitution</th>
+      <th>Health</th>
+      <th>Damage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= link_to character.name, character_path(character) %></td>
+        <td><%= character.constitution %></td>
+        <td><%= character.health %></td>
+        <td><%= character.damage %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
